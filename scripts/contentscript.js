@@ -30,12 +30,12 @@ function prepareObserver(blacklist) {
 }
 
 function checkVideo(element, blacklist) {
+    // don't hide the complete autoplay thing, just the video
     if (element.tagname === "ytd-compact-autoplay-renderer") {
         element = element.getElementsByTagName("ytd-compact-video-renderer")[0];
     }
     const text = element.getElementsByTagName("h3")[0].innerText.toLowerCase();
-    console.log(text, ...blacklist, blacklist.some( word => text.includes(word)));
-    if (blacklist.some( word => text.includes(word))) { 
+    if (blacklist.length > 0 && blacklist.some( word => text.includes(word))) { 
         element.setAttribute("style", "display: none !important;");
     }
 }
