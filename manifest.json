@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Youtube Recommendations Blocker",
+    "short_name": "YRB",
+    "description": "Hides recommended videos with titles that contain certain words or phrases.",
+    "version": "1.0.0",
+    "permissions": [],
+    "author": "Fabian Palitza - LordRedStone",
+    "homepage_url": "https://www.reddit.com/r/loreofleague/",
+    
+    "background": {
+        "scripts": ["scripts/background.js"],
+        "persistent": false
+        },
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtube.com/watch*"],
+            "js": ["scripts/contentscript.js"]
+        }
+    ],
+    "web_accessible_resources": ["blacklist.txt"]
+}
