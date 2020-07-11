@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "permissions": [],
     "author": "Fabian Palitza - LordRedStone",
-    "homepage_url": "https://www.reddit.com/r/loreofleague/",
+    "homepage_url": "https://github.com/LordredstoneNr1/youtube-recommendations-blocker",
     
     "background": {
         "scripts": ["scripts/background.js"],
